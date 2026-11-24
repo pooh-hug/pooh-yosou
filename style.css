@@ -62,6 +62,24 @@ a { color: var(--accent); }
 .article th, .article td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; }
 .article th { background: var(--accent-soft); }
 .disclaimer-line { color: var(--muted); font-size: 0.85rem; }
+.cat-intro p { margin: 0; }
+.howto h2 { font-size: 1.15rem; margin: 0 0 8px; }
+.howto p { margin: 6px 0; }
+.pick-box {
+  border: 2px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 16px 0;
+}
+.pick-box .pick-label {
+  display: block;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+.pick-box p { margin: 4px 0; }
 .site-footer {
   margin-top: 40px;
   border-top: 1px solid var(--line);
