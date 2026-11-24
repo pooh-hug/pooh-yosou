@@ -6,6 +6,18 @@
   --accent: #1f6f43;
   --accent-soft: #e3efe7;
   --line: #e2dccc;
+  --c-keiba: #2e7d46;
+  --c-keiba-bg: #e6f2e9;
+  --c-chiho: #9c5a24;
+  --c-chiho-bg: #f7ecdf;
+  --c-kyotei: #1f5fa8;
+  --c-kyotei-bg: #e4edf8;
+  --c-toto: #0f766e;
+  --c-toto-bg: #e2f1ef;
+  --c-winner: #a03d63;
+  --c-winner-bg: #f8e7ee;
+  --c-info: #6f675c;
+  --c-info-bg: #efeae0;
 }
 * { box-sizing: border-box; }
 body {
@@ -30,12 +42,19 @@ a { color: var(--accent); }
   text-decoration: none;
 }
 .site-tagline { color: var(--muted); margin: 4px 0 10px; font-size: 0.9rem; }
+.site-nav { display: flex; flex-wrap: wrap; }
 .site-nav a {
   margin-right: 14px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
+.site-nav a.nav-keiba { color: var(--c-keiba); }
+.site-nav a.nav-chiho { color: var(--c-chiho); }
+.site-nav a.nav-kyotei { color: var(--c-kyotei); }
+.site-nav a.nav-toto { color: var(--c-toto); }
+.site-nav a.nav-winner { color: var(--c-winner); }
 .card {
   background: var(--card);
   border: 1px solid var(--line);
@@ -56,6 +75,28 @@ a { color: var(--accent); }
   font-size: 0.8rem;
   font-weight: 600;
 }
+.badge-keiba { background: var(--c-keiba-bg); color: var(--c-keiba); }
+.badge-chiho { background: var(--c-chiho-bg); color: var(--c-chiho); }
+.badge-kyotei { background: var(--c-kyotei-bg); color: var(--c-kyotei); }
+.badge-toto { background: var(--c-toto-bg); color: var(--c-toto); }
+.badge-winner { background: var(--c-winner-bg); color: var(--c-winner); }
+.badge-info { background: var(--c-info-bg); color: var(--c-info); }
+.cat-list .card { border-left: 5px solid var(--line); }
+.cat-list .cat-keiba { border-left-color: var(--c-keiba); }
+.cat-list .cat-chiho { border-left-color: var(--c-chiho); }
+.cat-list .cat-kyotei { border-left-color: var(--c-kyotei); }
+.cat-list .cat-toto { border-left-color: var(--c-toto); }
+.cat-list .cat-winner { border-left-color: var(--c-winner); }
+.cat-list .cat-keiba h3 a { color: var(--c-keiba); }
+.cat-list .cat-chiho h3 a { color: var(--c-chiho); }
+.cat-list .cat-kyotei h3 a { color: var(--c-kyotei); }
+.cat-list .cat-toto h3 a { color: var(--c-toto); }
+.cat-list .cat-winner h3 a { color: var(--c-winner); }
+.cat-intro.cat-keiba { border-left: 5px solid var(--c-keiba); }
+.cat-intro.cat-chiho { border-left: 5px solid var(--c-chiho); }
+.cat-intro.cat-kyotei { border-left: 5px solid var(--c-kyotei); }
+.cat-intro.cat-toto { border-left: 5px solid var(--c-toto); }
+.cat-intro.cat-winner { border-left: 5px solid var(--c-winner); }
 .article h1 { font-size: 1.5rem; line-height: 1.5; margin: 6px 0 14px; }
 .article h2 { font-size: 1.2rem; border-left: 4px solid var(--accent); padding-left: 10px; margin-top: 28px; }
 .article table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.95rem; }
