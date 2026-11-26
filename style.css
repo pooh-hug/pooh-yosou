@@ -25,7 +25,9 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.85;
+  letter-spacing: 0.02em;
 }
 .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
 a { color: var(--accent); }
@@ -97,11 +99,72 @@ a { color: var(--accent); }
 .cat-intro.cat-kyotei { border-left: 5px solid var(--c-kyotei); }
 .cat-intro.cat-toto { border-left: 5px solid var(--c-toto); }
 .cat-intro.cat-winner { border-left: 5px solid var(--c-winner); }
-.article h1 { font-size: 1.5rem; line-height: 1.5; margin: 6px 0 14px; }
-.article h2 { font-size: 1.2rem; border-left: 4px solid var(--accent); padding-left: 10px; margin-top: 28px; }
-.article table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.95rem; }
-.article th, .article td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; }
+.article { line-height: 1.95; }
+@media (min-width: 640px) {
+  .card.article { padding: 30px 34px; }
+}
+.article h1 { font-size: 1.55rem; line-height: 1.55; margin: 8px 0 22px; }
+.article p { margin: 0 0 1.15em; }
+.article h2 {
+  font-size: 1.25rem;
+  background: var(--accent-soft);
+  border-left: 5px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 7px 12px;
+  margin: 2.2em 0 0.9em;
+}
+.article h3 { font-size: 1.12rem; margin: 1.8em 0 0.7em; }
+.article hr { border: none; border-top: 1px solid var(--line); margin: 30px 0 18px; }
+.article ul, .article ol { margin: 0 0 1.15em; padding-left: 1.5em; }
+.article li { margin-bottom: 0.55em; line-height: 1.75; }
+.article ol li::marker { font-weight: 700; color: var(--accent); }
+.article table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 0.95rem; display: block; overflow-x: auto; }
+.article th, .article td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
 .article th { background: var(--accent-soft); }
+.article tbody tr:nth-child(even) { background: #faf8f2; }
+/* 印ブロックのカード（build.pyが生成） */
+.marks-card {
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  background: var(--card);
+  padding: 4px 20px;
+  margin: 22px 0 26px;
+}
+.marks-card .mark-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.marks-card .mark-row:last-child { border-bottom: none; }
+.marks-card .mark-sym { font-size: 1.35rem; color: var(--accent); flex-shrink: 0; }
+/* 根拠の見出し（印＋名前） */
+.pick-head {
+  font-size: 1.18rem;
+  margin: 2em 0 0.6em;
+  padding-bottom: 7px;
+  border-bottom: 2px solid var(--line);
+  line-height: 1.5;
+}
+.pick-head::first-letter { color: var(--accent); font-size: 1.35em; }
+/* 買い目の見出し */
+.bet-head { font-size: 1.08rem; color: var(--accent); margin: 1.9em 0 0.6em; }
+/* 注意書き・出典行 */
+.note-line {
+  font-size: 0.88rem;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 16px;
+  line-height: 1.8;
+}
+.source-line { font-size: 0.8rem; color: var(--muted); line-height: 1.75; word-break: break-all; }
 .disclaimer-line { color: var(--muted); font-size: 0.85rem; }
 .cat-intro p { margin: 0; }
 .howto h2 { font-size: 1.15rem; margin: 0 0 8px; }
