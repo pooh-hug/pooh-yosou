@@ -122,6 +122,14 @@ a { color: var(--accent); }
 .article th, .article td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
 .article th { background: var(--accent-soft); }
 .article tbody tr:nth-child(even) { background: #faf8f2; }
+.article td.mark-cell {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  white-space: nowrap;
+}
+.article th { white-space: nowrap; }
 /* 印ブロックのカード（build.pyが生成） */
 .marks-card {
   border: 2px solid var(--accent);
